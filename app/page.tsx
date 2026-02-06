@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Truck, Ship, Plane, Package, MapPin, Phone, Mail, Clock, ChevronRight, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { MobileNav } from "@/components/mobile-nav"
 
 export default function HomePage() {
   return (
@@ -30,7 +31,7 @@ export default function HomePage() {
         </div>
         
         {/* Main Navigation */}
-        <nav className="container mx-auto px-4 py-4">
+        <nav className="container mx-auto px-4 py-4 relative">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3">
               <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-lg flex items-center justify-center">
@@ -41,18 +42,21 @@ export default function HomePage() {
                 <span className="text-xl font-light text-muted-foreground ml-1">Logistics</span>
               </div>
             </Link>
-            
+
             <div className="hidden md:flex items-center gap-8">
               <Link href="/" className="font-medium text-foreground hover:text-primary transition-colors">Home</Link>
               <Link href="/about" className="font-medium text-muted-foreground hover:text-primary transition-colors">About</Link>
               <Link href="/services" className="font-medium text-muted-foreground hover:text-primary transition-colors">Services</Link>
               <Link href="/contact" className="font-medium text-muted-foreground hover:text-primary transition-colors">Contact</Link>
             </div>
-            
-            <Button className="hidden sm:flex">
-              Get a Quote
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+
+            <div className="flex items-center gap-3">
+              <Button className="hidden sm:flex">
+                Get a Quote
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <MobileNav />
+            </div>
           </div>
         </nav>
       </header>
