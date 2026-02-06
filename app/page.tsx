@@ -59,7 +59,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#2D3748] via-[#2D3748]/90 to-[#2D3748] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-20" />
+        <Image src="/hero-delivery.jpg" alt="Delivery team loading van" fill className="object-cover opacity-30" priority />
         <div className="absolute inset-0 bg-gradient-to-r from-[#2D3748]/95 via-[#2D3748]/70 to-transparent" />
         
         <div className="container mx-auto px-4 py-24 md:py-32 relative">
@@ -205,13 +205,8 @@ export default function HomePage() {
             </div>
             
             <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl overflow-hidden border border-border">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <Truck className="h-24 w-24 text-primary/40 mx-auto mb-4" />
-                    <p className="text-muted-foreground">Professional Logistics Services</p>
-                  </div>
-                </div>
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-border relative">
+                <Image src="/delivery-team.jpg" alt="Two-man delivery team unloading packages from van" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
                 <div className="text-3xl font-bold">15+</div>
