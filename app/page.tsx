@@ -76,7 +76,7 @@ export default function HomePage() {
               Fast, reliable, and secure shipping services worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-base">
+              <Button size="lg" className="text-base bg-white text-[#2D3748] hover:bg-white/90">
                 Our Services
                 <ChevronRight className="ml-2 h-5 w-5" />
               </Button>
@@ -225,7 +225,7 @@ export default function HomePage() {
             Get a free quote today and experience the difference of working with a trusted logistics partner.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-base">
+            <Button size="lg" className="text-base bg-white text-[#2D3748] hover:bg-white/90">
               Request a Quote
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
