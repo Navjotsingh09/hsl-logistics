@@ -13,13 +13,13 @@ export default function HomePage() {
         <div className="bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 py-2 flex items-center justify-between text-sm">
             <div className="flex items-center gap-6">
-              <a href="tel:+441211234567" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="tel:+442031502602" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Phone className="h-4 w-4" />
-                <span>0121 123 4567</span>
+                <span>0203 150 2602</span>
               </a>
-              <a href="mailto:info@hsllogistics.co.uk" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="mailto:info@highspeedlogistics.co.uk" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Mail className="h-4 w-4" />
-                <span>info@hsllogistics.co.uk</span>
+                <span>info@highspeedlogistics.co.uk</span>
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -29,7 +29,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        
+
         {/* Main Navigation */}
         <nav className="container mx-auto px-4 py-4 relative">
           <div className="flex items-center justify-between">
@@ -38,7 +38,7 @@ export default function HomePage() {
                 <Truck className="h-7 w-7 text-primary-foreground" />
               </div>
               <div>
-                <span className="text-xl font-bold text-foreground">HSL</span>
+                <span className="text-xl font-bold text-foreground">High Speed</span>
                 <span className="text-xl font-light text-muted-foreground ml-1">Logistics</span>
               </div>
             </Link>
@@ -51,10 +51,12 @@ export default function HomePage() {
             </div>
 
             <div className="flex items-center gap-3">
-              <Button className="hidden sm:flex">
-                Get a Quote
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href="/contact">
+                <Button className="hidden sm:flex">
+                  Get a Quote
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
               <MobileNav />
             </div>
           </div>
@@ -63,21 +65,20 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#3F3D56] via-[#3F3D56]/90 to-[#3F3D56] text-white overflow-hidden">
-        <Image src="/hero-delivery.jpg" alt="Two man delivery service Birmingham - HSL Logistics van team" fill className="object-cover opacity-30" priority />
+        <Image src="/hero-delivery.jpg" alt="Two man delivery service Birmingham - High Speed Logistics van team" fill className="object-cover opacity-30" priority />
         <div className="absolute inset-0 bg-gradient-to-r from-[#3F3D56]/95 via-[#3F3D56]/70 to-transparent" />
-        
+
         <div className="container mx-auto px-4 py-24 md:py-32 relative">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20">
               <Truck className="h-4 w-4" />
-              Birmingham&apos;s Trusted Two Man Delivery Service
+              HIGH SPEED LOGISTICS LIMITED
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-balance">
-              Two Man Delivery &amp; <span className="text-[#009DCA]">Logistics in Birmingham</span>
+              Delivering Success Through <span className="text-[#009DCA]">Logistics And Expertise</span>
             </h1>
             <p className="text-lg md:text-xl text-[#EEEEEE] mb-8 leading-relaxed text-pretty">
-              Professional two man delivery service, road freight, and logistics solutions across
-              Birmingham, the West Midlands, and UK-wide. Same-day and next-day delivery available.
+              Whether its domestic transport, specialized logistics or urgent same day delivery. Our expertise ensures that every shipment is handled with precision and care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact">
@@ -127,7 +128,7 @@ export default function HomePage() {
               From two man deliveries to full freight solutions, we cover Birmingham, the West Midlands, and nationwide.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
@@ -182,14 +183,14 @@ export default function HomePage() {
                 Birmingham&apos;s Trusted Delivery &amp; Logistics Partner
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Based in the heart of Birmingham, HSL Logistics has been providing reliable two man delivery
+                Based in the heart of Birmingham, High Speed Logistics has been providing reliable two man delivery
                 services and freight solutions to businesses across the West Midlands for over 15 years.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                From our Birmingham depot, we serve the entire UK with same-day courier services,
-                road freight, and professional two man deliveries for heavy and bulky items.
+                Whether its domestic transport, specialized logistics or urgent same day delivery — our expertise
+                ensures that every shipment is handled with precision and care.
               </p>
-              
+
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
                 {[
                   "24/7 Customer Support",
@@ -205,16 +206,18 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-              
-              <Button size="lg">
-                Learn More About Us
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+
+              <Link href="/about">
+                <Button size="lg">
+                  Learn More About Us
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
-            
+
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-border relative">
-                <Image src="/delivery-team.jpg" alt="Two man delivery team Birmingham unloading packages from HSL Logistics van" fill className="object-cover" />
+                <Image src="/delivery-team.jpg" alt="Two man delivery team Birmingham unloading packages from High Speed Logistics van" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
                 <div className="text-3xl font-bold">15+</div>
@@ -239,11 +242,11 @@ export default function HomePage() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <Link href="tel:+441211234567">
+            <a href="tel:+442031502602">
               <Button size="lg" variant="outline" className="text-base border-white/30 text-white hover:bg-white/10">
-                Call 0121 123 4567
+                Call 0203 150 2602
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -258,74 +261,60 @@ export default function HomePage() {
                   <Truck className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <span className="text-lg font-bold text-white">HSL</span>
+                  <span className="text-lg font-bold text-white">High Speed</span>
                   <span className="text-lg font-light text-[#EEEEEE] ml-1">Logistics</span>
                 </div>
               </div>
-              <p className="text-[#EEEEEE] mb-6">
+              <p className="text-[#EEEEEE] mb-4">
                 Birmingham&apos;s trusted two man delivery and logistics company. Serving the West Midlands and UK-wide.
               </p>
-              <div className="flex gap-4">
-                {["facebook", "twitter", "linkedin", "instagram"].map((social) => (
-                  <a
-                    key={social}
-                    href="#"
-                    className="w-10 h-10 bg-[#EEEEEE]/10 rounded-lg flex items-center justify-center hover:bg-[#009DCA] transition-colors"
-                  >
-                    <span className="sr-only">{social}</span>
-                    <div className="w-4 h-4 bg-[#EEEEEE] rounded-sm" />
-                  </a>
-                ))}
-              </div>
+              <p className="text-[#EEEEEE]/60 text-sm">
+                HIGH SPEED LOGISTICS LIMITED<br />
+                Company number 12755346
+              </p>
             </div>
-            
+
             <div>
               <h4 className="text-white font-semibold text-lg mb-6">Quick Links</h4>
               <ul className="space-y-3">
-                {["Home", "About Us", "Services", "Contact"].map((link) => (
-                  <li key={link}>
-                    <Link href="#" className="hover:text-[#009DCA] transition-colors">
-                      {link}
-                    </Link>
-                  </li>
-                ))}
+                <li><Link href="/" className="hover:text-[#009DCA] transition-colors">Home</Link></li>
+                <li><Link href="/about" className="hover:text-[#009DCA] transition-colors">About Us</Link></li>
+                <li><Link href="/services" className="hover:text-[#009DCA] transition-colors">Services</Link></li>
+                <li><Link href="/contact" className="hover:text-[#009DCA] transition-colors">Contact</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="text-white font-semibold text-lg mb-6">Services</h4>
               <ul className="space-y-3">
-                {["Road Freight", "Ocean Freight", "Air Freight", "Warehousing"].map((service) => (
-                  <li key={service}>
-                    <Link href="#" className="hover:text-[#009DCA] transition-colors">
-                      {service}
-                    </Link>
-                  </li>
-                ))}
+                <li><Link href="/services" className="hover:text-[#009DCA] transition-colors">Two Man Delivery</Link></li>
+                <li><Link href="/services" className="hover:text-[#009DCA] transition-colors">Road Freight</Link></li>
+                <li><Link href="/services" className="hover:text-[#009DCA] transition-colors">Same-Day Courier</Link></li>
+                <li><Link href="/services" className="hover:text-[#009DCA] transition-colors">Warehousing</Link></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-white font-semibold text-lg mb-6">Contact Info</h4>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-[#009DCA] flex-shrink-0 mt-0.5" />
-                  <span>Unit 12, Aston Business Park, Birmingham, B6 4RN</span>
+                  <span>91 Soho Hill, Birmingham, England, B19 1AY</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>0121 123 4567</span>
+                  <span>0203 150 2602</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>info@hsllogistics.co.uk</span>
+                  <span>info@highspeedlogistics.co.uk</span>
                 </li>
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-[#EEEEEE]/20 mt-12 pt-8 text-center text-[#EEEEEE]/70">
-            <p>&copy; {new Date().getFullYear()} HSL Logistics. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} High Speed Logistics Limited. All rights reserved.</p>
           </div>
         </div>
       </footer>

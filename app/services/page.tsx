@@ -1,13 +1,12 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import { Truck, Ship, Plane, Package, MapPin, Phone, Mail, Clock, ChevronRight, ArrowRight, BarChart3, Boxes, FileCheck, Headphones } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { MobileNav } from "@/components/mobile-nav"
 
 export const metadata: Metadata = {
   title: "Two Man Delivery & Logistics Services Birmingham",
-  description: "HSL Logistics Birmingham offers two man delivery, road freight, same-day courier, and warehousing services across the West Midlands and UK-wide. Get a free quote today.",
+  description: "High Speed Logistics Birmingham offers two man delivery, road freight, same-day courier, and warehousing services across the West Midlands and UK-wide. Get a free quote today.",
 }
 
 export default function ServicesPage() {
@@ -18,13 +17,13 @@ export default function ServicesPage() {
         <div className="bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 py-2 flex items-center justify-between text-sm">
             <div className="flex items-center gap-6">
-              <a href="tel:+441211234567" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="tel:+442031502602" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Phone className="h-4 w-4" />
-                <span>0121 123 4567</span>
+                <span>0203 150 2602</span>
               </a>
-              <a href="mailto:info@hsllogistics.co.uk" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="mailto:info@highspeedlogistics.co.uk" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Mail className="h-4 w-4" />
-                <span>info@hsllogistics.co.uk</span>
+                <span>info@highspeedlogistics.co.uk</span>
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -42,7 +41,7 @@ export default function ServicesPage() {
                 <Truck className="h-7 w-7 text-primary-foreground" />
               </div>
               <div>
-                <span className="text-xl font-bold text-foreground">HSL</span>
+                <span className="text-xl font-bold text-foreground">High Speed</span>
                 <span className="text-xl font-light text-muted-foreground ml-1">Logistics</span>
               </div>
             </Link>
@@ -55,10 +54,12 @@ export default function ServicesPage() {
             </div>
 
             <div className="flex items-center gap-3">
-              <Button className="hidden sm:flex">
-                Get a Quote
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href="/contact">
+                <Button className="hidden sm:flex">
+                  Get a Quote
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
               <MobileNav />
             </div>
           </div>
@@ -71,7 +72,7 @@ export default function ServicesPage() {
           <div className="max-w-2xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Delivery &amp; Logistics Services in Birmingham</h1>
             <p className="text-[#EEEEEE] text-lg md:text-xl leading-relaxed">
-              From two man deliveries to full freight haulage, HSL Logistics serves Birmingham, the West Midlands, and UK-wide.
+              From two man deliveries to full freight haulage, High Speed Logistics serves Birmingham, the West Midlands, and UK-wide.
             </p>
           </div>
         </div>
@@ -86,7 +87,7 @@ export default function ServicesPage() {
               Birmingham&apos;s Complete Logistics Solutions
             </h2>
             <p className="text-muted-foreground text-lg">
-              From our Birmingham depot, we handle every aspect of your supply chain — two man deliveries, road freight, same-day courier, and warehousing.
+              From our Birmingham base, we handle every aspect of your supply chain — two man deliveries, road freight, same-day courier, and warehousing.
             </p>
           </div>
 
@@ -101,29 +102,29 @@ export default function ServicesPage() {
               },
               {
                 icon: Ship,
-                title: "Road Freight &amp; Haulage",
-                description: "Reliable road freight and haulage services from Birmingham to anywhere in the UK. Whether you need full truckload or part-load services, our fleet operates daily from our West Midlands depot.",
+                title: "Road Freight & Haulage",
+                description: "Reliable road freight and haulage services from Birmingham to anywhere in the UK. Whether you need full truckload or part-load services, our fleet operates daily from our West Midlands base.",
                 features: ["Full & Partial Truckload", "Birmingham to UK-Wide", "Palletised Freight", "Next-Day Haulage"],
                 reversed: true,
               },
               {
                 icon: Plane,
                 title: "Same-Day Courier Birmingham",
-                description: "Urgent same-day and next-day courier services from our Birmingham depot. We handle time-critical deliveries across the West Midlands and nationwide, with real-time tracking on every parcel.",
+                description: "Urgent same-day and next-day courier services from Birmingham. We handle time-critical deliveries across the West Midlands and nationwide, with real-time tracking on every parcel.",
                 features: ["Same-Day Birmingham Delivery", "Next-Day UK-Wide", "Parcel & Document Courier", "Real-Time Tracking"],
                 reversed: false,
               },
               {
                 icon: Package,
                 title: "Warehousing Birmingham",
-                description: "Secure warehousing and distribution facilities in Birmingham. Our West Midlands warehouse offers inventory management, pick and pack, order fulfillment, and distribution services for businesses of all sizes.",
-                features: ["Birmingham Warehouse Facility", "Inventory Management", "Pick &amp; Pack Fulfillment", "Cross-Docking Services"],
+                description: "Secure warehousing and distribution facilities in Birmingham. Our warehouse offers inventory management, pick and pack, order fulfillment, and distribution services for businesses of all sizes.",
+                features: ["Birmingham Warehouse Facility", "Inventory Management", "Pick & Pack Fulfillment", "Cross-Docking Services"],
                 reversed: true,
               },
-            ].map((service, index) => (
+            ].map((service) => (
               <div
                 key={service.title}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${service.reversed ? "lg:direction-rtl" : ""}`}
+                className="grid lg:grid-cols-2 gap-12 items-center"
               >
                 <div className={service.reversed ? "lg:order-2" : ""}>
                   <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
@@ -141,10 +142,12 @@ export default function ServicesPage() {
                       </div>
                     ))}
                   </div>
-                  <Button>
-                    Get a Quote
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link href="/contact">
+                    <Button>
+                      Get a Quote
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
                 <div className={`bg-muted/50 rounded-2xl p-8 md:p-12 flex items-center justify-center ${service.reversed ? "lg:order-1" : ""}`}>
                   <service.icon className="h-32 w-32 md:h-40 md:w-40 text-primary/20" />
@@ -192,13 +195,17 @@ export default function ServicesPage() {
             Get a free quote for two man delivery, road freight, courier, or warehousing services in Birmingham and the West Midlands.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-base bg-[#009DCA] text-white hover:bg-[#009DCA]/90">
-              Request a Quote
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button size="lg" variant="outline" className="text-base border-white/30 text-white hover:bg-white/10">
-              Contact Us
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="text-base bg-[#009DCA] text-white hover:bg-[#009DCA]/90">
+                Request a Quote
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button size="lg" variant="outline" className="text-base border-white/30 text-white hover:bg-white/10">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -213,38 +220,36 @@ export default function ServicesPage() {
                   <Truck className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <span className="text-lg font-bold text-white">HSL</span>
+                  <span className="text-lg font-bold text-white">High Speed</span>
                   <span className="text-lg font-light text-[#EEEEEE] ml-1">Logistics</span>
                 </div>
               </div>
-              <p className="text-[#EEEEEE] mb-6">
+              <p className="text-[#EEEEEE] mb-4">
                 Birmingham&apos;s trusted two man delivery and logistics company. Serving the West Midlands and UK-wide.
+              </p>
+              <p className="text-[#EEEEEE]/60 text-sm">
+                HIGH SPEED LOGISTICS LIMITED<br />
+                Company number 12755346
               </p>
             </div>
 
             <div>
               <h4 className="text-white font-semibold text-lg mb-6">Quick Links</h4>
               <ul className="space-y-3">
-                {["Home", "About Us", "Services", "Contact"].map((link) => (
-                  <li key={link}>
-                    <Link href="#" className="hover:text-[#009DCA] transition-colors">
-                      {link}
-                    </Link>
-                  </li>
-                ))}
+                <li><Link href="/" className="hover:text-[#009DCA] transition-colors">Home</Link></li>
+                <li><Link href="/about" className="hover:text-[#009DCA] transition-colors">About Us</Link></li>
+                <li><Link href="/services" className="hover:text-[#009DCA] transition-colors">Services</Link></li>
+                <li><Link href="/contact" className="hover:text-[#009DCA] transition-colors">Contact</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="text-white font-semibold text-lg mb-6">Services</h4>
               <ul className="space-y-3">
-                {["Road Freight", "Ocean Freight", "Air Freight", "Warehousing"].map((service) => (
-                  <li key={service}>
-                    <Link href="#" className="hover:text-[#009DCA] transition-colors">
-                      {service}
-                    </Link>
-                  </li>
-                ))}
+                <li><Link href="/services" className="hover:text-[#009DCA] transition-colors">Two Man Delivery</Link></li>
+                <li><Link href="/services" className="hover:text-[#009DCA] transition-colors">Road Freight</Link></li>
+                <li><Link href="/services" className="hover:text-[#009DCA] transition-colors">Same-Day Courier</Link></li>
+                <li><Link href="/services" className="hover:text-[#009DCA] transition-colors">Warehousing</Link></li>
               </ul>
             </div>
 
@@ -253,22 +258,22 @@ export default function ServicesPage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-[#009DCA] flex-shrink-0 mt-0.5" />
-                  <span>Unit 12, Aston Business Park, Birmingham, B6 4RN</span>
+                  <span>91 Soho Hill, Birmingham, England, B19 1AY</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>0121 123 4567</span>
+                  <span>0203 150 2602</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>info@hsllogistics.co.uk</span>
+                  <span>info@highspeedlogistics.co.uk</span>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-[#EEEEEE]/20 mt-12 pt-8 text-center text-[#EEEEEE]/70">
-            <p>&copy; {new Date().getFullYear()} HSL Logistics. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} High Speed Logistics Limited. All rights reserved.</p>
           </div>
         </div>
       </footer>

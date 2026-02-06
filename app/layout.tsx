@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
 import "./globals.css"
+import { WhatsAppButton } from "@/components/whatsapp-button"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -10,10 +11,10 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "HSL Logistics Birmingham | Two Man Delivery & Freight Services",
-    template: "%s | HSL Logistics Birmingham",
+    default: "High Speed Logistics Birmingham | Two Man Delivery & Freight Services",
+    template: "%s | High Speed Logistics Birmingham",
   },
-  description: "Birmingham's trusted logistics partner. Two man delivery service, same-day courier, road freight, warehousing & distribution across the West Midlands and UK-wide. Get a free quote today.",
+  description: "Birmingham's trusted logistics partner. Two man delivery service, same-day courier, road freight, warehousing & distribution across the West Midlands and UK-wide. Get a free quote today. Call 0203 150 2602.",
   keywords: [
     "logistics Birmingham",
     "two man delivery Birmingham",
@@ -27,17 +28,18 @@ export const metadata: Metadata = {
     "logistics company near me",
     "man and van Birmingham",
     "parcel delivery Birmingham",
+    "High Speed Logistics",
     "HSL Logistics",
     "Birmingham delivery company",
     "West Midlands logistics",
     "UK freight services",
   ],
   openGraph: {
-    title: "HSL Logistics Birmingham | Two Man Delivery & Freight Services",
+    title: "High Speed Logistics Birmingham | Two Man Delivery & Freight Services",
     description: "Birmingham's trusted logistics partner. Two man delivery, same-day courier, road freight & warehousing across the West Midlands and UK-wide.",
     type: "website",
     locale: "en_GB",
-    siteName: "HSL Logistics",
+    siteName: "High Speed Logistics",
   },
   robots: {
     index: true,
@@ -57,6 +59,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} font-sans antialiased`}>
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   )
