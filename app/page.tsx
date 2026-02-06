@@ -58,20 +58,20 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#2D3748] via-[#2D3748]/90 to-[#2D3748] text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2D3748]/95 via-[#2D3748]/70 to-transparent" />
         
         <div className="container mx-auto px-4 py-24 md:py-32 relative">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium mb-6 border border-primary/30">
+            <div className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20">
               <Truck className="h-4 w-4" />
               Trusted Logistics Partner
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-balance">
-              Delivering Excellence in <span className="text-primary">Global Logistics</span>
+              Delivering Excellence in <span className="text-[#A0AEC0]">Global Logistics</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed text-pretty">
+            <p className="text-lg md:text-xl text-[#A0AEC0] mb-8 leading-relaxed text-pretty">
               Professional freight and logistics solutions tailored to your business needs. 
               Fast, reliable, and secure shipping services worldwide.
             </p>
@@ -223,10 +223,10 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
+      <section className="py-20 bg-gradient-to-r from-[#2D3748] to-[#2D3748]/90 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Ship?</h2>
-          <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-[#A0AEC0] text-lg mb-8 max-w-2xl mx-auto">
             Get a free quote today and experience the difference of working with a trusted logistics partner.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -242,20 +242,20 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-300 py-16">
+      <footer className="bg-[#2D3748] text-[#A0AEC0] py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                  <Truck className="h-5 w-5 text-primary-foreground" />
+                <div className="w-10 h-10 bg-[#A0AEC0]/20 rounded-lg flex items-center justify-center">
+                  <Truck className="h-5 w-5 text-white" />
                 </div>
                 <div>
                   <span className="text-lg font-bold text-white">HSL</span>
-                  <span className="text-lg font-light text-slate-400 ml-1">Logistics</span>
+                  <span className="text-lg font-light text-[#A0AEC0] ml-1">Logistics</span>
                 </div>
               </div>
-              <p className="text-slate-400 mb-6">
+              <p className="text-[#A0AEC0] mb-6">
                 Professional freight and logistics solutions for businesses worldwide.
               </p>
               <div className="flex gap-4">
@@ -263,10 +263,10 @@ export default function HomePage() {
                   <a
                     key={social}
                     href="#"
-                    className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+                    className="w-10 h-10 bg-[#A0AEC0]/20 rounded-lg flex items-center justify-center hover:bg-[#A0AEC0]/40 transition-colors"
                   >
                     <span className="sr-only">{social}</span>
-                    <div className="w-4 h-4 bg-slate-400 rounded-sm" />
+                    <div className="w-4 h-4 bg-[#A0AEC0] rounded-sm" />
                   </a>
                 ))}
               </div>
@@ -277,20 +277,20 @@ export default function HomePage() {
               <ul className="space-y-3">
                 {["Home", "About Us", "Services", "Contact"].map((link) => (
                   <li key={link}>
-                    <Link href="#" className="hover:text-primary transition-colors">
+                    <Link href="#" className="hover:text-white transition-colors">
                       {link}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-white font-semibold text-lg mb-6">Services</h4>
               <ul className="space-y-3">
                 {["Road Freight", "Ocean Freight", "Air Freight", "Warehousing"].map((service) => (
                   <li key={service}>
-                    <Link href="#" className="hover:text-primary transition-colors">
+                    <Link href="#" className="hover:text-white transition-colors">
                       {service}
                     </Link>
                   </li>
@@ -302,22 +302,22 @@ export default function HomePage() {
               <h4 className="text-white font-semibold text-lg mb-6">Contact Info</h4>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <MapPin className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                   <span>123 Logistics Way, Suite 100, New York, NY 10001</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-primary flex-shrink-0" />
+                  <Phone className="h-5 w-5 text-white flex-shrink-0" />
                   <span>+1 (456) 789-0123</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-primary flex-shrink-0" />
+                  <Mail className="h-5 w-5 text-white flex-shrink-0" />
                   <span>info@hsllogistics.com</span>
                 </li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t border-slate-800 mt-12 pt-8 text-center text-slate-500">
+          <div className="border-t border-[#A0AEC0]/20 mt-12 pt-8 text-center text-[#A0AEC0]/70">
             <p>&copy; {new Date().getFullYear()} HSL Logistics. All rights reserved.</p>
           </div>
         </div>
