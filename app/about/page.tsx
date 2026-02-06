@@ -1,8 +1,14 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Truck, Ship, Plane, Package, MapPin, Phone, Mail, Clock, ChevronRight, ArrowRight, Users, Shield, Globe, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { MobileNav } from "@/components/mobile-nav"
+
+export const metadata: Metadata = {
+  title: "About Us - Two Man Delivery Company Birmingham",
+  description: "Learn about HSL Logistics, Birmingham's trusted two man delivery and logistics company. Over 15 years serving the West Midlands with reliable freight, courier, and warehousing solutions.",
+}
 
 export default function AboutPage() {
   return (
@@ -12,13 +18,13 @@ export default function AboutPage() {
         <div className="bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 py-2 flex items-center justify-between text-sm">
             <div className="flex items-center gap-6">
-              <a href="tel:+14567890123" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="tel:+441211234567" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Phone className="h-4 w-4" />
-                <span>+1 (456) 789-0123</span>
+                <span>0121 123 4567</span>
               </a>
-              <a href="mailto:info@hsllogistics.com" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="mailto:info@hsllogistics.co.uk" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Mail className="h-4 w-4" />
-                <span>info@hsllogistics.com</span>
+                <span>info@hsllogistics.co.uk</span>
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -63,9 +69,9 @@ export default function AboutPage() {
       <section className="relative bg-gradient-to-br from-[#3F3D56] via-[#3F3D56]/90 to-[#3F3D56] text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">About HSL Logistics</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">About HSL Logistics Birmingham</h1>
             <p className="text-[#EEEEEE] text-lg md:text-xl leading-relaxed">
-              Over 15 years of delivering excellence in global freight and supply chain solutions.
+              Birmingham&apos;s leading two man delivery and logistics company. Over 15 years serving the West Midlands with reliable freight and supply chain solutions.
             </p>
           </div>
         </div>
@@ -78,19 +84,20 @@ export default function AboutPage() {
             <div>
               <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Story</span>
               <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-6 text-foreground">
-                Built on Trust, Driven by Excellence
+                Birmingham&apos;s Delivery Experts Since 2009
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Founded in 2009, HSL Logistics began as a small freight forwarding company with a big vision:
-                to make global logistics accessible, reliable, and efficient for businesses of all sizes.
+                Founded in 2009 in Birmingham, HSL Logistics began as a local two man delivery service with
+                a clear mission: to provide the West Midlands with fast, reliable, and affordable logistics solutions.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Today, we operate across 120+ countries with a team of dedicated professionals who share a
-                passion for moving the world forward. Our commitment to innovation and customer service has
-                made us one of the most trusted names in the logistics industry.
+                Today, we are one of Birmingham&apos;s most trusted delivery companies, serving over 500 local
+                businesses with two man deliveries, road freight, same-day courier services, and warehousing
+                solutions across the West Midlands and UK-wide.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                We believe that every shipment tells a story — and we&apos;re honored to be part of yours.
+                From our Birmingham depot, we handle everything from bulky furniture deliveries to full
+                freight haulage — always with the care and professionalism our customers expect.
               </p>
             </div>
 
@@ -163,9 +170,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "15+", label: "Years Experience" },
-              { value: "50K+", label: "Deliveries Made" },
-              { value: "120+", label: "Countries Served" },
+              { value: "15+", label: "Years in Birmingham" },
+              { value: "50K+", label: "Deliveries Completed" },
+              { value: "500+", label: "Birmingham Businesses Served" },
               { value: "99%", label: "Customer Satisfaction" },
             ].map((stat) => (
               <div key={stat.label}>
@@ -211,9 +218,9 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-[#3F3D56] to-[#3F3D56]/90 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Work Together?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Need a Delivery in Birmingham?</h2>
           <p className="text-[#EEEEEE] text-lg mb-8 max-w-2xl mx-auto">
-            Let us show you why thousands of businesses trust HSL Logistics with their shipping needs.
+            Get a free quote today. Two man delivery, same-day courier, and freight services across Birmingham and the West Midlands.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-base bg-[#009DCA] text-white hover:bg-[#009DCA]/90">
@@ -242,7 +249,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <p className="text-[#EEEEEE] mb-6">
-                Professional freight and logistics solutions for businesses worldwide.
+                Birmingham&apos;s trusted two man delivery and logistics company. Serving the West Midlands and UK-wide.
               </p>
             </div>
 
@@ -277,15 +284,15 @@ export default function AboutPage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-[#009DCA] flex-shrink-0 mt-0.5" />
-                  <span>123 Logistics Way, Suite 100, New York, NY 10001</span>
+                  <span>Unit 12, Aston Business Park, Birmingham, B6 4RN</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>+1 (456) 789-0123</span>
+                  <span>0121 123 4567</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>info@hsllogistics.com</span>
+                  <span>info@hsllogistics.co.uk</span>
                 </li>
               </ul>
             </div>

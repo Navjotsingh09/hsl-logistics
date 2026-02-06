@@ -1,7 +1,13 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Truck, MapPin, Phone, Mail, Clock, ArrowRight, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { MobileNav } from "@/components/mobile-nav"
+
+export const metadata: Metadata = {
+  title: "Contact HSL Logistics Birmingham - Get a Free Quote",
+  description: "Contact HSL Logistics for two man delivery, courier, freight, and warehousing services in Birmingham. Call 0121 123 4567 or request a free quote online.",
+}
 
 export default function ContactPage() {
   return (
@@ -11,13 +17,13 @@ export default function ContactPage() {
         <div className="bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 py-2 flex items-center justify-between text-sm">
             <div className="flex items-center gap-6">
-              <a href="tel:+14567890123" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="tel:+441211234567" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Phone className="h-4 w-4" />
-                <span>+1 (456) 789-0123</span>
+                <span>0121 123 4567</span>
               </a>
-              <a href="mailto:info@hsllogistics.com" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="mailto:info@hsllogistics.co.uk" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Mail className="h-4 w-4" />
-                <span>info@hsllogistics.com</span>
+                <span>info@hsllogistics.co.uk</span>
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -62,9 +68,9 @@ export default function ContactPage() {
       <section className="relative bg-gradient-to-br from-[#3F3D56] via-[#3F3D56]/90 to-[#3F3D56] text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Contact Us</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Contact HSL Logistics Birmingham</h1>
             <p className="text-[#EEEEEE] text-lg md:text-xl leading-relaxed">
-              Have a question or need a quote? Our team is here to help you with all your logistics needs.
+              Get a free quote for two man delivery, courier, freight, or warehousing in Birmingham and the West Midlands.
             </p>
           </div>
         </div>
@@ -88,8 +94,8 @@ export default function ContactPage() {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Our Office</h3>
-                  <p className="text-muted-foreground text-sm">123 Logistics Way, Suite 100<br />New York, NY 10001</p>
+                  <h3 className="font-semibold text-foreground mb-1">Our Birmingham Office</h3>
+                  <p className="text-muted-foreground text-sm">Unit 12, Aston Business Park<br />Birmingham, B6 4RN</p>
                 </div>
               </div>
 
@@ -99,8 +105,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                  <p className="text-muted-foreground text-sm">+1 (456) 789-0123</p>
-                  <p className="text-muted-foreground text-sm">+1 (456) 789-0124</p>
+                  <p className="text-muted-foreground text-sm">0121 123 4567</p>
+                  <p className="text-muted-foreground text-sm">0121 123 4568</p>
                 </div>
               </div>
 
@@ -110,8 +116,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <p className="text-muted-foreground text-sm">info@hsllogistics.com</p>
-                  <p className="text-muted-foreground text-sm">support@hsllogistics.com</p>
+                  <p className="text-muted-foreground text-sm">info@hsllogistics.co.uk</p>
+                  <p className="text-muted-foreground text-sm">support@hsllogistics.co.uk</p>
                 </div>
               </div>
 
@@ -180,7 +186,7 @@ export default function ContactPage() {
                         type="tel"
                         id="phone"
                         className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                        placeholder="+1 (456) 789-0123"
+                        placeholder="0121 123 4567"
                       />
                     </div>
                   </div>
@@ -231,8 +237,8 @@ export default function ContactPage() {
           <div className="bg-card border border-border rounded-2xl overflow-hidden h-64 md:h-96 flex items-center justify-center">
             <div className="text-center">
               <MapPin className="h-16 w-16 text-primary/30 mx-auto mb-4" />
-              <p className="text-muted-foreground text-lg font-medium">123 Logistics Way, Suite 100</p>
-              <p className="text-muted-foreground">New York, NY 10001</p>
+              <p className="text-muted-foreground text-lg font-medium">Unit 12, Aston Business Park</p>
+              <p className="text-muted-foreground">Birmingham, B6 4RN</p>
             </div>
           </div>
         </div>
@@ -253,7 +259,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <p className="text-[#EEEEEE] mb-6">
-                Professional freight and logistics solutions for businesses worldwide.
+                Birmingham&apos;s trusted two man delivery and logistics company. Serving the West Midlands and UK-wide.
               </p>
             </div>
 
@@ -288,15 +294,15 @@ export default function ContactPage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-[#009DCA] flex-shrink-0 mt-0.5" />
-                  <span>123 Logistics Way, Suite 100, New York, NY 10001</span>
+                  <span>Unit 12, Aston Business Park, Birmingham, B6 4RN</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>+1 (456) 789-0123</span>
+                  <span>0121 123 4567</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>info@hsllogistics.com</span>
+                  <span>info@hsllogistics.co.uk</span>
                 </li>
               </ul>
             </div>

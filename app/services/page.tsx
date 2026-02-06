@@ -1,8 +1,14 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Truck, Ship, Plane, Package, MapPin, Phone, Mail, Clock, ChevronRight, ArrowRight, BarChart3, Boxes, FileCheck, Headphones } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { MobileNav } from "@/components/mobile-nav"
+
+export const metadata: Metadata = {
+  title: "Two Man Delivery & Logistics Services Birmingham",
+  description: "HSL Logistics Birmingham offers two man delivery, road freight, same-day courier, and warehousing services across the West Midlands and UK-wide. Get a free quote today.",
+}
 
 export default function ServicesPage() {
   return (
@@ -12,13 +18,13 @@ export default function ServicesPage() {
         <div className="bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 py-2 flex items-center justify-between text-sm">
             <div className="flex items-center gap-6">
-              <a href="tel:+14567890123" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="tel:+441211234567" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Phone className="h-4 w-4" />
-                <span>+1 (456) 789-0123</span>
+                <span>0121 123 4567</span>
               </a>
-              <a href="mailto:info@hsllogistics.com" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="mailto:info@hsllogistics.co.uk" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Mail className="h-4 w-4" />
-                <span>info@hsllogistics.com</span>
+                <span>info@hsllogistics.co.uk</span>
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -63,9 +69,9 @@ export default function ServicesPage() {
       <section className="relative bg-gradient-to-br from-[#3F3D56] via-[#3F3D56]/90 to-[#3F3D56] text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Our Services</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Delivery &amp; Logistics Services in Birmingham</h1>
             <p className="text-[#EEEEEE] text-lg md:text-xl leading-relaxed">
-              Comprehensive logistics solutions tailored to your business needs, from road to air and sea.
+              From two man deliveries to full freight haulage, HSL Logistics serves Birmingham, the West Midlands, and UK-wide.
             </p>
           </div>
         </div>
@@ -77,10 +83,10 @@ export default function ServicesPage() {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">Core Services</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 text-foreground">
-              End-to-End Logistics Solutions
+              Birmingham&apos;s Complete Logistics Solutions
             </h2>
             <p className="text-muted-foreground text-lg">
-              We handle every aspect of your supply chain so you can focus on growing your business.
+              From our Birmingham depot, we handle every aspect of your supply chain — two man deliveries, road freight, same-day courier, and warehousing.
             </p>
           </div>
 
@@ -88,30 +94,30 @@ export default function ServicesPage() {
             {[
               {
                 icon: Truck,
-                title: "Road Freight",
-                description: "Our extensive road freight network covers local, regional, and cross-border transportation. We offer full truckload (FTL) and less-than-truckload (LTL) services with real-time GPS tracking on every shipment.",
-                features: ["Full & Partial Truckload", "Express Same-Day Delivery", "Temperature-Controlled Transport", "GPS Real-Time Tracking"],
+                title: "Two Man Delivery Birmingham",
+                description: "Our professional two man delivery service is perfect for heavy, bulky, or high-value items across Birmingham and the West Midlands. We deliver furniture, appliances, commercial equipment, and more — right to the room of choice.",
+                features: ["Heavy & Bulky Item Delivery", "Room of Choice Service", "Assembly Available", "GPS Real-Time Tracking"],
                 reversed: false,
               },
               {
                 icon: Ship,
-                title: "Ocean Freight",
-                description: "Cost-effective and reliable ocean freight services for international shipping. We handle everything from documentation to customs clearance, offering both FCL and LCL container solutions.",
-                features: ["Full Container Load (FCL)", "Less Container Load (LCL)", "Customs Brokerage", "Port-to-Door Delivery"],
+                title: "Road Freight &amp; Haulage",
+                description: "Reliable road freight and haulage services from Birmingham to anywhere in the UK. Whether you need full truckload or part-load services, our fleet operates daily from our West Midlands depot.",
+                features: ["Full & Partial Truckload", "Birmingham to UK-Wide", "Palletised Freight", "Next-Day Haulage"],
                 reversed: true,
               },
               {
                 icon: Plane,
-                title: "Air Freight",
-                description: "When speed matters most, our air freight services deliver. We partner with major airlines worldwide to provide express, standard, and charter air cargo solutions for time-sensitive shipments.",
-                features: ["Express & Standard Options", "Charter Services", "Dangerous Goods Handling", "Airport-to-Airport & Door-to-Door"],
+                title: "Same-Day Courier Birmingham",
+                description: "Urgent same-day and next-day courier services from our Birmingham depot. We handle time-critical deliveries across the West Midlands and nationwide, with real-time tracking on every parcel.",
+                features: ["Same-Day Birmingham Delivery", "Next-Day UK-Wide", "Parcel & Document Courier", "Real-Time Tracking"],
                 reversed: false,
               },
               {
                 icon: Package,
-                title: "Warehousing & Distribution",
-                description: "State-of-the-art warehousing facilities with advanced inventory management systems. We provide secure storage, order fulfillment, and distribution services to streamline your supply chain.",
-                features: ["Secure Storage Facilities", "Inventory Management", "Order Fulfillment", "Cross-Docking Services"],
+                title: "Warehousing Birmingham",
+                description: "Secure warehousing and distribution facilities in Birmingham. Our West Midlands warehouse offers inventory management, pick and pack, order fulfillment, and distribution services for businesses of all sizes.",
+                features: ["Birmingham Warehouse Facility", "Inventory Management", "Pick &amp; Pack Fulfillment", "Cross-Docking Services"],
                 reversed: true,
               },
             ].map((service, index) => (
@@ -181,9 +187,9 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-[#3F3D56] to-[#3F3D56]/90 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Need a Custom Solution?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Need a Delivery in Birmingham?</h2>
           <p className="text-[#EEEEEE] text-lg mb-8 max-w-2xl mx-auto">
-            Every business is unique. Let us design a logistics solution that fits your specific requirements.
+            Get a free quote for two man delivery, road freight, courier, or warehousing services in Birmingham and the West Midlands.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-base bg-[#009DCA] text-white hover:bg-[#009DCA]/90">
@@ -212,7 +218,7 @@ export default function ServicesPage() {
                 </div>
               </div>
               <p className="text-[#EEEEEE] mb-6">
-                Professional freight and logistics solutions for businesses worldwide.
+                Birmingham&apos;s trusted two man delivery and logistics company. Serving the West Midlands and UK-wide.
               </p>
             </div>
 
@@ -247,15 +253,15 @@ export default function ServicesPage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-[#009DCA] flex-shrink-0 mt-0.5" />
-                  <span>123 Logistics Way, Suite 100, New York, NY 10001</span>
+                  <span>Unit 12, Aston Business Park, Birmingham, B6 4RN</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>+1 (456) 789-0123</span>
+                  <span>0121 123 4567</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>info@hsllogistics.com</span>
+                  <span>info@hsllogistics.co.uk</span>
                 </li>
               </ul>
             </div>
