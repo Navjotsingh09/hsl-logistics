@@ -302,7 +302,7 @@ export default function HomePage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-[#009DCA] flex-shrink-0 mt-0.5" />
-                  <span>123 Logistics Way, Suite 100, New York, NY 10001</span>
+                  <span>91 Soho Hill, Birmingham, England, B19 1AY</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
@@ -317,7 +317,8 @@ export default function HomePage() {
           </div>
           
           <div className="border-t border-[#EEEEEE]/20 mt-12 pt-8 text-center text-[#EEEEEE]/70">
-            <p>&copy; {new Date().getFullYear()} HSL Logistics. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} HIGH SPEED LOGISTICS LIMITED. All rights reserved.</p>
+            <p className="text-sm mt-1">Company number: 12755346</p>
           </div>
         </div>
       </footer>

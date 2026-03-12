@@ -89,7 +89,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Our Office</h3>
-                  <p className="text-muted-foreground text-sm">123 Logistics Way, Suite 100<br />New York, NY 10001</p>
+                  <p className="text-muted-foreground text-sm">91 Soho Hill, Birmingham<br />England, B19 1AY</p>
                 </div>
               </div>
 
@@ -231,8 +231,8 @@ export default function ContactPage() {
           <div className="bg-card border border-border rounded-2xl overflow-hidden h-64 md:h-96 flex items-center justify-center">
             <div className="text-center">
               <MapPin className="h-16 w-16 text-primary/30 mx-auto mb-4" />
-              <p className="text-muted-foreground text-lg font-medium">123 Logistics Way, Suite 100</p>
-              <p className="text-muted-foreground">New York, NY 10001</p>
+              <p className="text-muted-foreground text-lg font-medium">91 Soho Hill, Birmingham</p>
+              <p className="text-muted-foreground">England, B19 1AY</p>
             </div>
           </div>
         </div>
@@ -288,7 +288,7 @@ export default function ContactPage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-[#009DCA] flex-shrink-0 mt-0.5" />
-                  <span>123 Logistics Way, Suite 100, New York, NY 10001</span>
+                  <span>91 Soho Hill, Birmingham, England, B19 1AY</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
@@ -303,7 +303,8 @@ export default function ContactPage() {
           </div>
 
           <div className="border-t border-[#EEEEEE]/20 mt-12 pt-8 text-center text-[#EEEEEE]/70">
-            <p>&copy; {new Date().getFullYear()} HSL Logistics. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} HIGH SPEED LOGISTICS LIMITED. All rights reserved.</p>
+            <p className="text-sm mt-1">Company number: 12755346</p>
           </div>
         </div>
       </footer>
