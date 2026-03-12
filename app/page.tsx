@@ -13,13 +13,13 @@ export default function HomePage() {
         <div className="bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 py-2 flex items-center justify-between text-sm">
             <div className="flex items-center gap-6">
-              <a href="tel:+14567890123" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="tel:02031502602" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Phone className="h-4 w-4" />
-                <span>+1 (456) 789-0123</span>
+                <span>02031502602</span>
               </a>
-              <a href="mailto:info@hsllogistics.com" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="mailto:info@highspeedlogistics.co.uk" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Mail className="h-4 w-4" />
-                <span>info@hsllogistics.com</span>
+                <span>info@highspeedlogistics.co.uk</span>
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -306,11 +306,11 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>+1 (456) 789-0123</span>
+                  <span>02031502602</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>info@hsllogistics.com</span>
+                  <span>info@highspeedlogistics.co.uk</span>
                 </li>
               </ul>
             </div>

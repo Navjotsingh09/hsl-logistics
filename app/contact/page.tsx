@@ -11,13 +11,13 @@ export default function ContactPage() {
         <div className="bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 py-2 flex items-center justify-between text-sm">
             <div className="flex items-center gap-6">
-              <a href="tel:+14567890123" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="tel:02031502602" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Phone className="h-4 w-4" />
-                <span>+1 (456) 789-0123</span>
+                <span>02031502602</span>
               </a>
-              <a href="mailto:info@hsllogistics.com" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a href="mailto:info@highspeedlogistics.co.uk" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Mail className="h-4 w-4" />
-                <span>info@hsllogistics.com</span>
+                <span>info@highspeedlogistics.co.uk</span>
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -99,8 +99,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                  <p className="text-muted-foreground text-sm">+1 (456) 789-0123</p>
-                  <p className="text-muted-foreground text-sm">+1 (456) 789-0124</p>
+                  <p className="text-muted-foreground text-sm">02031502602</p>
+                  <p className="text-muted-foreground text-sm">02031502602</p>
                 </div>
               </div>
 
@@ -110,8 +110,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <p className="text-muted-foreground text-sm">info@hsllogistics.com</p>
-                  <p className="text-muted-foreground text-sm">support@hsllogistics.com</p>
+                  <p className="text-muted-foreground text-sm">info@highspeedlogistics.co.uk</p>
+                  <p className="text-muted-foreground text-sm">info@highspeedlogistics.co.uk</p>
                 </div>
               </div>
 
@@ -180,7 +180,7 @@ export default function ContactPage() {
                         type="tel"
                         id="phone"
                         className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                        placeholder="+1 (456) 789-0123"
+                        placeholder="02031502602"
                       />
                     </div>
                   </div>
@@ -292,11 +292,11 @@ export default function ContactPage() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>+1 (456) 789-0123</span>
+                  <span>02031502602</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
-                  <span>info@hsllogistics.com</span>
+                  <span>info@highspeedlogistics.co.uk</span>
                 </li>
               </ul>
             </div>
