@@ -302,7 +302,7 @@ export default function HomePage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-[#009DCA] flex-shrink-0 mt-0.5" />
-                  <span>91 Soho Hill, Birmingham, England, B19 1AY</span>
+                  <span>91 Soho Hill, Birmingham, England, B19 1AY</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
