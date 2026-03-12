@@ -7,22 +7,22 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b border-border/40 bg-card">
-        <div className="bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 py-2 flex items-center justify-between text-sm">
+      <header className="sticky top-0 z-50">
+        <div className="bg-[#2D2B45] text-white/90 text-sm">
+          <div className="container mx-auto px-4 py-2.5 flex items-center justify-between">
             <div className="flex items-center gap-6">
               <a href="tel:02031502602" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
-                <Phone className="h-4 w-4" />
+                <Phone className="h-3.5 w-3.5 text-[#009DCA]" />
                 <span>02031502602</span>
               </a>
               <a href="mailto:info@highspeedlogistics.co.uk" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
-                <Mail className="h-4 w-4" />
+                <Mail className="h-3.5 w-3.5 text-[#009DCA]" />
                 <span>info@highspeedlogistics.co.uk</span>
               </a>
             </div>
             <div className="flex items-center gap-2">
-              <Clock className="h-4 w-4" />
-              <span className="hidden sm:inline">Mon - Fri: 8:00 AM - 6:00 PM</span>
+              <Clock className="h-3.5 w-3.5 text-[#009DCA]" />
+              <span className="hidden sm:inline">Mon – Fri: 8:00 AM – 6:00 PM</span>
               <span className="sm:hidden">8AM - 6PM</span>
             </div>
           </div>
@@ -50,7 +50,7 @@ export default function ContactPage() {
             <div className="flex items-center gap-3">
               <Button className="hidden sm:flex">
                 Get a Quote
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-3.5 w-3.5 text-[#009DCA]" />
               </Button>
               <MobileNav />
             </div>
@@ -216,7 +216,7 @@ export default function ContactPage() {
 
                   <Button size="lg" className="w-full sm:w-auto">
                     Send Message
-                    <Send className="ml-2 h-4 w-4" />
+                    <Send className="ml-2 h-3.5 w-3.5 text-[#009DCA]" />
                   </Button>
                 </form>
               </div>
