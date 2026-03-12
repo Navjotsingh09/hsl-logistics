@@ -1,9 +1,12 @@
 export const companyInfo = {
-  name: "HSL Logistics",
-  phone: "+1 (555) 123-4567",
-  email: "contact@hsllogistics.com",
-  address: "123 Logistics Drive, Commerce City, CO 80022",
-  hours: "24 hours a day, 7 days a week"
+  name: "HIGH SPEED LOGISTICS LIMITED",
+  shortName: "HSL Logistics",
+  phone: "02031502602",
+  email: "info@highspeedlogistics.co.uk",
+  addressLine1: "91 Soho Hill",
+  addressLine2: "Birmingham, England, B19 1AY",
+  hours: "Mon–Fri 8am–6pm",
+  companyNumber: "12755346",
 }
 
 export const navLinks = [

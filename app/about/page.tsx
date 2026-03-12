@@ -13,16 +13,16 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 py-2.5 flex items-center justify-between">
             <div className="flex items-center gap-6">
               <a href="tel:02031502602" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
-                <Phone className="h-3.5 w-3.5 text-[#009DCA]" />
+                <Phone className="h-3.5 w-3.5 text-primary" />
                 <span>02031502602</span>
               </a>
               <a href="mailto:info@highspeedlogistics.co.uk" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
-                <Mail className="h-3.5 w-3.5 text-[#009DCA]" />
+                <Mail className="h-3.5 w-3.5 text-primary" />
                 <span>info@highspeedlogistics.co.uk</span>
               </a>
             </div>
             <div className="flex items-center gap-2">
-              <Clock className="h-3.5 w-3.5 text-[#009DCA]" />
+              <Clock className="h-3.5 w-3.5 text-primary" />
               <span className="hidden sm:inline">Mon – Fri: 8:00 AM – 6:00 PM</span>
               <span className="sm:hidden">8AM - 6PM</span>
             </div>
@@ -51,7 +51,7 @@ export default function AboutPage() {
             <div className="flex items-center gap-3">
               <Button className="hidden sm:flex">
                 Get a Quote
-                <ArrowRight className="ml-2 h-3.5 w-3.5 text-[#009DCA]" />
+                <ArrowRight className="ml-2 h-3.5 w-3.5 text-primary" />
               </Button>
               <MobileNav />
             </div>
@@ -64,7 +64,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">About HSL Logistics</h1>
-            <p className="text-[#EEEEEE] text-lg md:text-xl leading-relaxed">
+            <p className="text-white/80 text-lg md:text-xl leading-relaxed">
               Over 15 years of delivering excellence in global freight and supply chain solutions.
             </p>
           </div>
@@ -212,15 +212,15 @@ export default function AboutPage() {
       <section className="py-16 md:py-20 bg-gradient-to-r from-[#3F3D56] to-[#3F3D56]/90 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Work Together?</h2>
-          <p className="text-[#EEEEEE] text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
             Let us show you why thousands of businesses trust HSL Logistics with their shipping needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-base bg-[#009DCA] text-white hover:bg-[#009DCA]/90">
+            <Button size="lg" className="text-base bg-primary text-white hover:bg-primary/90">
               Contact Us
-              <ArrowRight className="ml-2 h-3.5 w-3.5 text-[#009DCA]" />
+              <ArrowRight className="ml-2 h-3.5 w-3.5 text-primary" />
             </Button>
-            <Button size="lg" variant="outline" className="text-base border-white/30 text-white hover:bg-white/10">
+            <Button size="lg" className="text-base bg-white/15 border-2 border-white text-white hover:bg-white/25">
               View Services
             </Button>
           </div>
@@ -228,20 +228,20 @@ export default function AboutPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#3F3D56] text-[#EEEEEE] py-16">
+      <footer className="bg-[#2D2B45] text-white/80 py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-[#009DCA] rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                   <Truck className="h-5 w-5 text-white" />
                 </div>
                 <div>
                   <span className="text-lg font-bold text-white">HSL</span>
-                  <span className="text-lg font-light text-[#EEEEEE] ml-1">Logistics</span>
+                  <span className="text-lg font-light text-white/80 ml-1">Logistics</span>
                 </div>
               </div>
-              <p className="text-[#EEEEEE] mb-6">
+              <p className="text-white/80 mb-6">
                 Professional freight and logistics solutions for businesses worldwide.
               </p>
             </div>
@@ -251,7 +251,7 @@ export default function AboutPage() {
               <ul className="space-y-3">
                 {["Home", "About Us", "Services", "Contact"].map((link) => (
                   <li key={link}>
-                    <Link href="#" className="hover:text-[#009DCA] transition-colors">
+                    <Link href="#" className="hover:text-primary transition-colors">
                       {link}
                     </Link>
                   </li>
@@ -264,7 +264,7 @@ export default function AboutPage() {
               <ul className="space-y-3">
                 {["Road Freight", "Ocean Freight", "Air Freight", "Warehousing"].map((service) => (
                   <li key={service}>
-                    <Link href="#" className="hover:text-[#009DCA] transition-colors">
+                    <Link href="#" className="hover:text-primary transition-colors">
                       {service}
                     </Link>
                   </li>
@@ -276,22 +276,22 @@ export default function AboutPage() {
               <h4 className="text-white font-semibold text-lg mb-6">Contact Info</h4>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-[#009DCA] flex-shrink-0 mt-0.5" />
+                  <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <span>91 Soho Hill, Birmingham, England, B19 1AY</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
+                  <Phone className="h-5 w-5 text-primary flex-shrink-0" />
                   <span>02031502602</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-[#009DCA] flex-shrink-0" />
+                  <Mail className="h-5 w-5 text-primary flex-shrink-0" />
                   <span>info@highspeedlogistics.co.uk</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-[#EEEEEE]/20 mt-12 pt-8 text-center text-[#EEEEEE]/70">
+          <div className="border-t border-white/20 mt-12 pt-8 text-center text-white/80/70">
             <p>&copy; {new Date().getFullYear()} HIGH SPEED LOGISTICS LIMITED. All rights reserved.</p>
             <p className="text-sm mt-1">Company number: 12755346</p>
           </div>
