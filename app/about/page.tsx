@@ -8,7 +8,7 @@ export default function AboutPage() {
     <>
 
       {/* Page Hero */}
-      <section className="relative bg-gradient-to-br from-[#3F3D56] via-[#3F3D56]/90 to-[#3F3D56] text-white py-16 md:py-24">
+      <section className="relative bg-gradient-to-br from-[#040957] via-[#040957]/90 to-[#040957] text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">About HSL Logistics</h1>
@@ -157,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-[#3F3D56] to-[#3F3D56]/90 text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-r from-[#040957] to-[#040957]/90 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Work Together?</h2>
           <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">

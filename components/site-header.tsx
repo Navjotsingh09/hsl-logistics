@@ -19,7 +19,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50">
       {/* Utility bar */}
-      <div className="hidden sm:block bg-[#1E293B] text-slate-300 text-xs">
+      <div className="hidden sm:block bg-[#040957] text-slate-300 text-xs">
         <div className="container mx-auto px-4 py-2 flex items-center justify-between">
           <div className="flex items-center gap-5">
             <a
@@ -49,7 +49,7 @@ export function SiteHeader() {
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             <Link href="/" className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-lg bg-[#1E293B] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-[#040957] flex items-center justify-center">
                 <Truck className="h-5 w-5 text-white" />
               </div>
               <span className="text-lg font-bold tracking-tight text-slate-900">HSL Logistics</span>
@@ -71,7 +71,7 @@ export function SiteHeader() {
                   >
                     {link.label}
                     {isActive && (
-                      <span className="absolute inset-x-1 -bottom-[19px] h-0.5 rounded-full bg-[#1E293B]" />
+                      <span className="absolute inset-x-1 -bottom-[19px] h-0.5 rounded-full bg-[#040957]" />
                     )}
                   </Link>
                 )
@@ -87,7 +87,7 @@ export function SiteHeader() {
                 Call Us
               </a>
               <Button
-                className="hidden sm:inline-flex rounded-lg h-10 px-5 bg-[#1E293B] text-white text-sm font-semibold shadow-sm hover:bg-[#334155]"
+                className="hidden sm:inline-flex rounded-lg h-10 px-5 bg-[#040957] text-white text-sm font-semibold shadow-sm hover:bg-[#0C1280]"
                 asChild
               >
                 <Link href="/contact">

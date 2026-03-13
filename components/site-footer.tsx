@@ -4,7 +4,7 @@ import { companyInfo, quickLinks, serviceLinks } from "@/lib/site-data"
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[#2D2B45] text-white/80 py-16">
+    <footer className="bg-[#040957] text-white/80 py-16">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>

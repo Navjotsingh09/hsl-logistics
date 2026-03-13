@@ -8,9 +8,9 @@ export default function HomePage() {
     <>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#3F3D56] via-[#3F3D56]/90 to-[#3F3D56] text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#040957] via-[#040957]/90 to-[#040957] text-white overflow-hidden">
         <Image src="/hero-delivery.jpg" alt="Delivery team loading van" fill className="object-cover opacity-30" priority />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#3F3D56]/95 via-[#3F3D56]/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040957]/95 via-[#040957]/70 to-transparent" />
         
         <div className="container mx-auto px-4 py-24 md:py-32 relative">
           <div className="max-w-2xl">
@@ -174,7 +174,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#3F3D56] to-[#3F3D56]/90 text-white">
+      <section className="py-20 bg-gradient-to-r from-[#040957] to-[#040957]/90 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Ship?</h2>
           <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
