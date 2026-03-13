@@ -9,66 +9,88 @@ type SiteHeaderProps = {
 }
 
 export function SiteHeader({ currentPath }: SiteHeaderProps) {
+  const isLinkActive = (href: string) => {
+    if (href === "/") return currentPath === "/"
+    return currentPath === href || currentPath.startsWith(`${href}/`)
+  }
+
   return (
     <header className="sticky top-0 z-50">
-      <div className="hidden sm:block bg-[#2D2B45] text-white/90 text-sm">
-        <div className="container mx-auto px-4 py-2.5 flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <a href={`tel:${companyInfo.phone}`} className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Phone className="h-3.5 w-3.5 text-primary" />
+      {/* Utility bar */}
+      <div className="hidden sm:block bg-[#1E293B] text-slate-300 text-xs">
+        <div className="container mx-auto px-4 py-2 flex items-center justify-between">
+          <div className="flex items-center gap-5">
+            <a
+              href={`tel:${companyInfo.phone}`}
+              className="flex items-center gap-1.5 hover:text-white transition-colors"
+            >
+              <Phone className="h-3 w-3" />
               <span>{companyInfo.phone}</span>
             </a>
-            <a href={`mailto:${companyInfo.email}`} className="hidden sm:flex items-center gap-2 hover:text-primary transition-colors">
-              <Mail className="h-3.5 w-3.5 text-primary" />
+            <a
+              href={`mailto:${companyInfo.email}`}
+              className="hidden md:flex items-center gap-1.5 hover:text-white transition-colors"
+            >
+              <Mail className="h-3 w-3" />
               <span>{companyInfo.email}</span>
             </a>
           </div>
-          <div className="flex items-center gap-2">
-            <Clock className="h-3.5 w-3.5 text-primary" />
-            <span className="hidden sm:inline">{companyInfo.hours}</span>
-            <span className="sm:hidden">8AM–6PM</span>
+          <div className="flex items-center gap-1.5 text-slate-400">
+            <Clock className="h-3 w-3" />
+            <span>{companyInfo.hours}</span>
           </div>
         </div>
       </div>
 
-      <nav className="bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-11 h-11 bg-primary rounded-xl flex items-center justify-center shadow">
-                <Truck className="h-6 w-6 text-white" />
+      {/* Main navigation */}
+      <nav className="bg-white border-b border-slate-200 shadow-sm">
+        <div className="container mx-auto px-4">
+          <div className="flex h-16 items-center justify-between">
+            <Link href="/" className="flex items-center gap-2.5">
+              <div className="w-10 h-10 rounded-lg bg-[#1E293B] flex items-center justify-center">
+                <Truck className="h-5 w-5 text-white" />
               </div>
-              <div>
-                <span className="text-xl font-bold text-[#2D2B45]">HSL</span>
-                <span className="text-xl font-medium text-primary ml-1">Logistics</span>
-              </div>
+              <span className="text-lg font-bold tracking-tight text-slate-900">HSL Logistics</span>
             </Link>
 
-            <div className="hidden md:flex items-center gap-3 lg:gap-5">
+            <div className="hidden md:flex items-center gap-1">
               {navLinks.map((link) => {
-                const isActive = currentPath === link.href
-
+                const isActive = isLinkActive(link.href)
                 return (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+                    aria-current={isActive ? "page" : undefined}
+                    className={`relative px-4 py-2 text-sm font-medium transition-colors ${
                       isActive
-                        ? "bg-primary/10 text-primary"
-                        : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                        ? "text-slate-900"
+                        : "text-slate-500 hover:text-slate-900"
                     }`}
                   >
                     {link.label}
+                    {isActive && (
+                      <span className="absolute inset-x-1 -bottom-[19px] h-0.5 rounded-full bg-[#1E293B]" />
+                    )}
                   </Link>
                 )
               })}
             </div>
 
-            <div className="flex items-center gap-2 sm:gap-3">
-              <Button className="hidden lg:flex" asChild>
+            <div className="flex items-center gap-3">
+              <a
+                href={`tel:${companyInfo.phone}`}
+                className="hidden lg:inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
+              >
+                <Phone className="h-3.5 w-3.5" />
+                Call Us
+              </a>
+              <Button
+                className="hidden sm:inline-flex rounded-lg h-10 px-5 bg-[#1E293B] text-white text-sm font-semibold shadow-sm hover:bg-[#334155]"
+                asChild
+              >
                 <Link href="/contact">
                   Get a Quote
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-1.5 h-4 w-4" />
                 </Link>
               </Button>
               <MobileNav />
