@@ -49,9 +49,11 @@ export default function ServicesPage() {
             </div>
 
             <div className="flex items-center gap-3">
-              <Button className="hidden sm:flex">
-                Get a Quote
-                <ArrowRight className="ml-2 h-3.5 w-3.5 text-primary" />
+              <Button className="hidden sm:flex" asChild>
+                <Link href="/contact">
+                  Get a Quote
+                  <ArrowRight className="ml-2 h-3.5 w-3.5" />
+                </Link>
               </Button>
               <MobileNav />
             </div>
@@ -135,9 +137,11 @@ export default function ServicesPage() {
                       </div>
                     ))}
                   </div>
-                  <Button>
-                    Get a Quote
-                    <ArrowRight className="ml-2 h-3.5 w-3.5 text-primary" />
+                  <Button asChild>
+                    <Link href="/contact">
+                      Get a Quote
+                      <ArrowRight className="ml-2 h-3.5 w-3.5" />
+                    </Link>
                   </Button>
                 </div>
                 <div className={`bg-muted/50 rounded-2xl p-8 md:p-12 flex items-center justify-center ${service.reversed ? "lg:order-1" : ""}`}>
@@ -186,12 +190,16 @@ export default function ServicesPage() {
             Every business is unique. Let us design a logistics solution that fits your specific requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-base bg-primary text-white hover:bg-primary/90">
-              Request a Quote
-              <ArrowRight className="ml-2 h-3.5 w-3.5 text-primary" />
+            <Button size="lg" className="text-base bg-primary text-white hover:bg-primary/90" asChild>
+              <Link href="/contact">
+                Request a Quote
+                <ArrowRight className="ml-2 h-3.5 w-3.5" />
+              </Link>
             </Button>
-            <Button size="lg" className="text-base bg-white/15 border-2 border-white text-white hover:bg-white/25">
-              Contact Us
+            <Button size="lg" className="text-base bg-white/15 border-2 border-white text-white hover:bg-white/25" asChild>
+              <Link href="/contact">
+                Contact Us
+              </Link>
             </Button>
           </div>
         </div>
@@ -219,10 +227,15 @@ export default function ServicesPage() {
             <div>
               <h4 className="text-white font-semibold text-lg mb-6">Quick Links</h4>
               <ul className="space-y-3">
-                {["Home", "About Us", "Services", "Contact"].map((link) => (
-                  <li key={link}>
-                    <Link href="#" className="hover:text-primary transition-colors">
-                      {link}
+                {[
+                    { label: "Home", href: "/" },
+                    { label: "About Us", href: "/about" },
+                    { label: "Services", href: "/services" },
+                    { label: "Contact", href: "/contact" },
+                  ].map((link) => (
+                  <li key={link.label}>
+                    <Link href={link.href} className="hover:text-primary transition-colors">
+                      {link.label}
                     </Link>
                   </li>
                 ))}
@@ -234,7 +247,7 @@ export default function ServicesPage() {
               <ul className="space-y-3">
                 {["Road Freight", "Ocean Freight", "Air Freight", "Warehousing"].map((service) => (
                   <li key={service}>
-                    <Link href="#" className="hover:text-primary transition-colors">
+                    <Link href="/services" className="hover:text-primary transition-colors">
                       {service}
                     </Link>
                   </li>

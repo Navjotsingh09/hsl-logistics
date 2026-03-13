@@ -48,9 +48,11 @@ export default function ContactPage() {
             </div>
 
             <div className="flex items-center gap-3">
-              <Button className="hidden sm:flex">
-                Get a Quote
-                <ArrowRight className="ml-2 h-3.5 w-3.5 text-primary" />
+              <Button className="hidden sm:flex" asChild>
+                <Link href="/contact">
+                  Get a Quote
+                  <ArrowRight className="ml-2 h-3.5 w-3.5" />
+                </Link>
               </Button>
               <MobileNav />
             </div>
@@ -260,10 +262,15 @@ export default function ContactPage() {
             <div>
               <h4 className="text-white font-semibold text-lg mb-6">Quick Links</h4>
               <ul className="space-y-3">
-                {["Home", "About Us", "Services", "Contact"].map((link) => (
-                  <li key={link}>
-                    <Link href="#" className="hover:text-primary transition-colors">
-                      {link}
+                {[
+                    { label: "Home", href: "/" },
+                    { label: "About Us", href: "/about" },
+                    { label: "Services", href: "/services" },
+                    { label: "Contact", href: "/contact" },
+                  ].map((link) => (
+                  <li key={link.label}>
+                    <Link href={link.href} className="hover:text-primary transition-colors">
+                      {link.label}
                     </Link>
                   </li>
                 ))}
@@ -275,7 +282,7 @@ export default function ContactPage() {
               <ul className="space-y-3">
                 {["Road Freight", "Ocean Freight", "Air Freight", "Warehousing"].map((service) => (
                   <li key={service}>
-                    <Link href="#" className="hover:text-primary transition-colors">
+                    <Link href="/services" className="hover:text-primary transition-colors">
                       {service}
                     </Link>
                   </li>
