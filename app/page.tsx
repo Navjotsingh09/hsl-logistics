@@ -54,7 +54,7 @@ export default function HomePage() {
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-3xl md:text-4xl font-bold mb-2">{stat.value}</div>
-                <div className="text-primary-foreground/80 text-sm md:text-base">{stat.label}</div>
+                <div className="text-primary-foreground text-sm md:text-base">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -166,7 +166,7 @@ export default function HomePage() {
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
                 <div className="text-3xl font-bold">15+</div>
-                <div className="text-sm text-primary-foreground/80">Years of Excellence</div>
+                <div className="text-sm text-primary-foreground">Years of Excellence</div>
               </div>
             </div>
           </div>

@@ -69,7 +69,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8 text-center text-white/40 text-sm">
+        <div className="border-t border-white/10 mt-12 pt-8 text-center text-white/60 text-sm">
           <p>&copy; {new Date().getFullYear()} {companyInfo.name}. All rights reserved.</p>
           <p className="text-sm mt-1">Company number: {companyInfo.companyNumber}</p>
         </div>
