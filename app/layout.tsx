@@ -1,4 +1,7 @@
 import type { Metadata } from "next"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
+
 import { Poppins } from "next/font/google"
 import "./globals.css"
 
@@ -21,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} font-sans antialiased`}>
+        <SiteHeader />
         <main id="main-content">{children}</main>
+        <SiteFooter />
       </body>
     </html>
   )

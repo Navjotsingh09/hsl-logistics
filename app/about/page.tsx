@@ -1,65 +1,11 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Truck, Ship, Plane, Package, MapPin, Phone, Mail, Clock, ChevronRight, ArrowRight, Users, Shield, Globe, Award } from "lucide-react"
+import { ArrowRight, Users, Shield, Globe, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { MobileNav } from "@/components/mobile-nav"
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50">
-        <div className="bg-[#2D2B45] text-white/90 text-sm">
-          <div className="container mx-auto px-4 py-2.5 flex items-center justify-between">
-            <div className="flex items-center gap-6">
-              <a href="tel:02031502602" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
-                <Phone className="h-3.5 w-3.5 text-primary" />
-                <span>02031502602</span>
-              </a>
-              <a href="mailto:info@highspeedlogistics.co.uk" className="hidden sm:flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
-                <Mail className="h-3.5 w-3.5 text-primary" />
-                <span>info@highspeedlogistics.co.uk</span>
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="h-3.5 w-3.5 text-primary" />
-              <span className="hidden sm:inline">Mon – Fri: 8:00 AM – 6:00 PM</span>
-              <span className="sm:hidden">8AM - 6PM</span>
-            </div>
-          </div>
-        </div>
-
-        <nav className="container mx-auto px-4 py-4 relative">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-lg flex items-center justify-center">
-                <Truck className="h-7 w-7 text-primary-foreground" />
-              </div>
-              <div>
-                <span className="text-xl font-bold text-foreground">HSL</span>
-                <span className="text-xl font-light text-muted-foreground ml-1">Logistics</span>
-              </div>
-            </Link>
-
-            <div className="hidden md:flex items-center gap-8">
-              <Link href="/" className="font-medium text-muted-foreground hover:text-primary transition-colors">Home</Link>
-              <Link href="/about" className="font-medium text-foreground hover:text-primary transition-colors">About</Link>
-              <Link href="/services" className="font-medium text-muted-foreground hover:text-primary transition-colors">Services</Link>
-              <Link href="/contact" className="font-medium text-muted-foreground hover:text-primary transition-colors">Contact</Link>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <Button className="hidden sm:flex" asChild>
-                <Link href="/contact">
-                  Get a Quote
-                  <ArrowRight className="ml-2 h-3.5 w-3.5" />
-                </Link>
-              </Button>
-              <MobileNav />
-            </div>
-          </div>
-        </nav>
-      </header>
+    <>
 
       {/* Page Hero */}
       <section className="relative bg-gradient-to-br from-[#3F3D56] via-[#3F3D56]/90 to-[#3F3D56] text-white py-16 md:py-24">
@@ -233,81 +179,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#2D2B45] text-white/80 py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                  <Truck className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <span className="text-lg font-bold text-white">HSL</span>
-                  <span className="text-lg font-light text-white/80 ml-1">Logistics</span>
-                </div>
-              </div>
-              <p className="text-white/80 mb-6">
-                Professional freight and logistics solutions for businesses worldwide.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold text-lg mb-6">Quick Links</h4>
-              <ul className="space-y-3">
-                {[
-                    { label: "Home", href: "/" },
-                    { label: "About Us", href: "/about" },
-                    { label: "Services", href: "/services" },
-                    { label: "Contact", href: "/contact" },
-                  ].map((link) => (
-                  <li key={link.label}>
-                    <Link href={link.href} className="hover:text-primary transition-colors">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold text-lg mb-6">Services</h4>
-              <ul className="space-y-3">
-                {["Road Freight", "Ocean Freight", "Air Freight", "Warehousing"].map((service) => (
-                  <li key={service}>
-                    <Link href="/services" className="hover:text-primary transition-colors">
-                      {service}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold text-lg mb-6">Contact Info</h4>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>91 Soho Hill, Birmingham, England, B19 1AY</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span>02031502602</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span>info@highspeedlogistics.co.uk</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-white/20 mt-12 pt-8 text-center text-white/80/70">
-            <p>&copy; {new Date().getFullYear()} HIGH SPEED LOGISTICS LIMITED. All rights reserved.</p>
-            <p className="text-sm mt-1">Company number: 12755346</p>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </>
   )
 }

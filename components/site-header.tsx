@@ -1,14 +1,16 @@
+"use client"
+
+import { usePathname } from "next/navigation"
+
 import Link from "next/link"
 import { ArrowRight, Clock, Mail, Phone, Truck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { MobileNav } from "@/components/mobile-nav"
 import { companyInfo, navLinks } from "@/lib/site-data"
 
-type SiteHeaderProps = {
-  currentPath: string
-}
 
-export function SiteHeader({ currentPath }: SiteHeaderProps) {
+export function SiteHeader() {
+  const currentPath = usePathname()
   const isLinkActive = (href: string) => {
     if (href === "/") return currentPath === "/"
     return currentPath === href || currentPath.startsWith(`${href}/`)
