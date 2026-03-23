@@ -48,7 +48,6 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Phone</h3>
                   <p className="text-muted-foreground text-sm">02031502602</p>
-                  <p className="text-muted-foreground text-sm">02031502602</p>
                 </div>
               </div>
 
@@ -58,7 +57,6 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <p className="text-muted-foreground text-sm">info@highspeedlogistics.co.uk</p>
                   <p className="text-muted-foreground text-sm">info@highspeedlogistics.co.uk</p>
                 </div>
               </div>
@@ -82,7 +80,12 @@ export default function ContactPage() {
                 <h3 className="text-2xl font-bold text-foreground mb-2">Send Us a Message</h3>
                 <p className="text-muted-foreground mb-8">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
 
-                <form className="space-y-6">
+                <form action="https://formsubmit.co/info@highspeedlogistics.co.uk" method="POST" className="space-y-6">
+                  <input type="hidden" name="_subject" value="New Contact Form Submission - HSL Logistics" />
+                  <input type="hidden" name="_next" value="https://highspeedlogistics.co.uk/contact" />
+                  <input type="hidden" name="_captcha" value="true" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" aria-label="Do not fill this field" />
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
@@ -91,6 +94,8 @@ export default function ContactPage() {
                       <input
                         type="text"
                         id="firstName"
+                        name="First Name"
+                        required
                         className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                         placeholder="John"
                       />
@@ -102,6 +107,8 @@ export default function ContactPage() {
                       <input
                         type="text"
                         id="lastName"
+                        name="Last Name"
+                        required
                         className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                         placeholder="Doe"
                       />
@@ -116,6 +123,8 @@ export default function ContactPage() {
                       <input
                         type="email"
                         id="email"
+                        name="Email"
+                        required
                         className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                         placeholder="john@example.com"
                       />
@@ -127,6 +136,7 @@ export default function ContactPage() {
                       <input
                         type="tel"
                         id="phone"
+                        name="Phone"
                         className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                         placeholder="02031502602"
                       />
@@ -139,14 +149,16 @@ export default function ContactPage() {
                     </label>
                     <select
                       id="service"
+                      name="Service Required"
+                      required
                       className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                     >
                       <option value="">Select a service</option>
-                      <option value="road">Road Freight</option>
-                      <option value="ocean">Ocean Freight</option>
-                      <option value="air">Air Freight</option>
-                      <option value="warehousing">Warehousing</option>
-                      <option value="other">Other</option>
+                      <option value="Road Freight">Road Freight</option>
+                      <option value="Ocean Freight">Ocean Freight</option>
+                      <option value="Air Freight">Air Freight</option>
+                      <option value="Warehousing">Warehousing</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
 
@@ -156,13 +168,15 @@ export default function ContactPage() {
                     </label>
                     <textarea
                       id="message"
+                      name="Message"
+                      required
                       rows={5}
                       className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
                       placeholder="Tell us about your shipping needs..."
                     />
                   </div>
 
-                  <Button size="lg" className="w-full sm:w-auto">
+                  <Button type="submit" size="lg" className="w-full sm:w-auto">
                     Send Message
                     <Send className="ml-2 h-3.5 w-3.5 text-primary" />
                   </Button>
