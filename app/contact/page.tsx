@@ -82,7 +82,7 @@ export default function ContactPage() {
 
                 <form action="https://formsubmit.co/info@highspeedlogistics.co.uk" method="POST" className="space-y-6">
                   <input type="hidden" name="_subject" value="New Contact Form Submission - HSL Logistics" />
-                  <input type="hidden" name="_next" value="https://highspeedlogistics.co.uk/contact" />
+                  <input type="hidden" name="_next" value="https://highspeedlogistics.co.uk/contact/thanks" />
                   <input type="hidden" name="_captcha" value="true" />
                   <input type="hidden" name="_template" value="table" />
                   <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" aria-label="Do not fill this field" />
