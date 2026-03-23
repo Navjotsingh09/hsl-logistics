@@ -41,6 +41,8 @@ export async function POST(request: Request) {
       method: "POST",
       headers: {
         Accept: "application/json",
+        Origin: "https://highspeedlogistics.co.uk",
+        Referer: "https://highspeedlogistics.co.uk/contact",
         "Content-Type": "application/x-www-form-urlencoded",
       },
       body: payload.toString(),
