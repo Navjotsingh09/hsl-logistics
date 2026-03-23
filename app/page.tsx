@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Truck, Ship, Plane, Package, ChevronRight, ArrowRight } from "lucide-react"
+import { Truck, Package, Clock, MapPin, ChevronRight, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function HomePage() {
@@ -16,14 +16,14 @@ export default function HomePage() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20">
               <Truck className="h-3.5 w-3.5 text-primary" />
-              Trusted Logistics Partner
+              Trusted Delivery Partner
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-balance">
-              Delivering Excellence in <span className="text-primary">Global Logistics</span>
+              Fast & Reliable <span className="text-primary">Van Delivery</span>
             </h1>
             <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed text-pretty">
-              Professional freight and logistics solutions tailored to your business needs. 
-              Fast, reliable, and secure shipping services worldwide.
+              Reliable van delivery and courier services tailored to your business needs. 
+              Same-day and next-day delivery across the UK.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="text-base bg-primary text-white hover:bg-primary/90" asChild>
@@ -34,7 +34,7 @@ export default function HomePage() {
               </Button>
               <Button size="lg" className="text-base bg-white/15 border-2 border-white text-white hover:bg-white/25" asChild>
                 <Link href="/contact">
-                  Track Shipment
+                  Get a Quote
                 </Link>
               </Button>
             </div>
@@ -47,10 +47,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "15+", label: "Years Experience" },
-              { value: "50K+", label: "Deliveries Made" },
-              { value: "120+", label: "Countries Served" },
-              { value: "99%", label: "Customer Satisfaction" },
+              { value: "10+", label: "Years Experience" },
+              { value: "50K+", label: "Deliveries Completed" },
+              { value: "500+", label: "Happy Clients" },
+              { value: "99.5%", label: "On-Time Rate" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-3xl md:text-4xl font-bold mb-2">{stat.value}</div>
@@ -67,10 +67,10 @@ export default function HomePage() {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Services</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 text-foreground">
-              Comprehensive Logistics Solutions
+              Van Delivery Solutions
             </h2>
             <p className="text-muted-foreground text-lg">
-              We offer a full range of logistics services to meet all your transportation and supply chain needs.
+              From same-day courier to dedicated van hire, we have a solution for every delivery need.
             </p>
           </div>
           
@@ -78,23 +78,23 @@ export default function HomePage() {
             {[
               {
                 icon: Truck,
-                title: "Road Freight",
-                description: "Reliable ground transportation for local and long-distance deliveries across continents.",
+                title: "Same-Day Delivery",
+                description: "Urgent deliveries collected and delivered the same day across the UK.",
               },
               {
-                icon: Ship,
-                title: "Ocean Freight",
-                description: "Cost-effective sea shipping solutions for large cargo and international trade.",
+                icon: Clock,
+                title: "Next-Day Delivery",
+                description: "Reliable next-day courier service for your time-sensitive packages.",
               },
               {
-                icon: Plane,
-                title: "Air Freight",
-                description: "Express air cargo services for time-sensitive shipments worldwide.",
+                icon: MapPin,
+                title: "Multi-Drop Delivery",
+                description: "Efficient multi-drop routes for businesses with multiple delivery points.",
               },
               {
                 icon: Package,
-                title: "Warehousing",
-                description: "Secure storage facilities with inventory management and distribution services.",
+                title: "Dedicated Van Hire",
+                description: "Full van and driver hire for large moves, events, or ongoing contracts.",
               },
             ].map((service) => (
               <div
@@ -125,22 +125,22 @@ export default function HomePage() {
             <div>
               <span className="text-primary font-semibold text-sm uppercase tracking-wider">About Us</span>
               <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-6 text-foreground">
-                Your Trusted Partner in Global Logistics
+                Your Trusted Van Delivery Partner
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                With over 15 years of experience in the logistics industry, HSL Logistics has established 
-                itself as a leader in providing comprehensive freight and supply chain solutions.
+                With over 10 years of experience in the delivery industry, HSL Logistics has established 
+                itself as a trusted name in van delivery and courier services across the UK.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Our commitment to excellence, combined with cutting-edge technology and a global network 
-                of partners, enables us to deliver exceptional service to businesses of all sizes.
+                Our commitment to excellence, combined with a reliable fleet of vans and professional drivers, 
+                enables us to deliver exceptional service to businesses of all sizes.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
                 {[
                   "24/7 Customer Support",
-                  "Real-time Tracking",
-                  "Secure Handling",
+                  "GPS-Tracked Deliveries",
+                  "Careful Handling",
                   "Competitive Pricing",
                 ].map((feature) => (
                   <div key={feature} className="flex items-center gap-3">
@@ -165,7 +165,7 @@ export default function HomePage() {
                 <Image src="/delivery-team.jpg" alt="Two-man delivery team unloading packages from van" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold">15+</div>
+                <div className="text-3xl font-bold">10+</div>
                 <div className="text-sm text-primary-foreground">Years of Excellence</div>
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#040957] to-[#040957]/90 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Ship?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Deliver?</h2>
           <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
             Get a free quote today and experience the difference of working with a trusted logistics partner.
           </p>

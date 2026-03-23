@@ -23,8 +23,8 @@ export const quickLinks = [
 ]
 
 export const serviceLinks = [
-  { label: "Shipping", href: "/services" },
-  { label: "Warehousing", href: "/services" },
-  { label: "Customs", href: "/services" },
-  { label: "Tracking", href: "/contact" }
+  { label: "Same-Day Delivery", href: "/services" },
+  { label: "Next-Day Delivery", href: "/services" },
+  { label: "Multi-Drop", href: "/services" },
+  { label: "Van Hire", href: "/services" }
 ]

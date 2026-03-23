@@ -18,7 +18,7 @@ export function SiteFooter() {
               </div>
             </div>
             <p className="text-white/70 mb-6">
-              Professional freight and logistics solutions for businesses worldwide.
+              Professional van delivery and courier services across the UK.
             </p>
           </div>
 

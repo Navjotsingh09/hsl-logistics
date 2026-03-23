@@ -11,7 +11,7 @@ export function ContactForm() {
     name: "",
     email: "",
     phone: "",
-    service: "shipping",
+    service: "same-day",
     message: "",
     companyWebsite: ""
   })
@@ -24,10 +24,15 @@ export function ContactForm() {
     const startTime = Date.now()
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: "42896ff0-a00e-4de8-88bc-d82f69005734",
+          subject: "New Contact Form Submission - HSL Logistics",
+          from_name: "HSL Logistics Website",
+          ...formData,
+        })
       })
 
       const endTime = Date.now()
@@ -35,20 +40,20 @@ export function ContactForm() {
 
       const data = await response.json()
 
-      if (response.ok) {
+      if (data.success) {
         setStatus("success")
         setMessage("Message sent successfully! We'll be in touch soon.")
         setFormData({
           name: "",
           email: "",
           phone: "",
-          service: "shipping",
+          service: "same-day",
           message: "",
           companyWebsite: ""
         })
       } else {
         setStatus("error")
-        setMessage(data.error || "Failed to send message. Please try again.")
+        setMessage("Failed to send message. Please try again.")
       }
     } catch (error) {
       setStatus("error")
@@ -111,7 +116,7 @@ export function ContactForm() {
           value={formData.phone}
           onChange={handleChange}
           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none"
-          placeholder="(555) 123-4567"
+          placeholder="07xxx xxxxxx"
         />
       </div>
 
@@ -127,10 +132,10 @@ export function ContactForm() {
           onChange={handleChange}
           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none"
         >
-          <option value="shipping">Shipping</option>
-          <option value="warehousing">Warehousing</option>
-          <option value="customs">Customs Clearance</option>
-          <option value="tracking">Tracking</option>
+          <option value="same-day">Same-Day Delivery</option>
+          <option value="next-day">Next-Day Delivery</option>
+          <option value="multi-drop">Multi-Drop Delivery</option>
+          <option value="dedicated-van">Dedicated Van Hire</option>
         </select>
       </div>
 
@@ -146,7 +151,7 @@ export function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none resize-none"
-          placeholder="Tell us about your logistics needs..."
+          placeholder="Tell us about your delivery needs..."
         />
       </div>
 

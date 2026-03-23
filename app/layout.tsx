@@ -12,8 +12,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "HSL Logistics - Professional Freight & Shipping Solutions",
-  description: "HSL Logistics provides comprehensive freight and logistics solutions including road, ocean, and air freight services. Trusted by businesses worldwide for reliable shipping.",
+  title: "HSL Logistics - Van Delivery & Courier Services",
+  description: "HSL Logistics provides fast and reliable van delivery and courier services across the UK. Same-day, next-day, and dedicated van hire for businesses of all sizes.",
 }
 
 export default function RootLayout({

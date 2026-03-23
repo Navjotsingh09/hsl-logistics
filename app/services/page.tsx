@@ -1,6 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
-import { Truck, Ship, Plane, Package, ChevronRight, ArrowRight, BarChart3, Boxes, FileCheck, Headphones } from "lucide-react"
+import { Truck, Clock, MapPin, Package, ChevronRight, ArrowRight, Boxes, Headphones, Shield, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function ServicesPage() {
@@ -13,7 +12,7 @@ export default function ServicesPage() {
           <div className="max-w-2xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Our Services</h1>
             <p className="text-white/80 text-lg md:text-xl leading-relaxed">
-              Comprehensive logistics solutions tailored to your business needs, from road to air and sea.
+              Professional van delivery and courier services tailored to your business needs across the UK.
             </p>
           </div>
         </div>
@@ -25,10 +24,10 @@ export default function ServicesPage() {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">Core Services</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 text-foreground">
-              End-to-End Logistics Solutions
+              Van Delivery Solutions
             </h2>
             <p className="text-muted-foreground text-lg">
-              We handle every aspect of your supply chain so you can focus on growing your business.
+              We handle every delivery so you can focus on growing your business.
             </p>
           </div>
 
@@ -36,30 +35,30 @@ export default function ServicesPage() {
             {[
               {
                 icon: Truck,
-                title: "Road Freight",
-                description: "Our extensive road freight network covers local, regional, and cross-border transportation. We offer full truckload (FTL) and less-than-truckload (LTL) services with real-time GPS tracking on every shipment.",
-                features: ["Full & Partial Truckload", "Express Same-Day Delivery", "Temperature-Controlled Transport", "GPS Real-Time Tracking"],
+                title: "Same-Day Delivery",
+                description: "Need it there today? Our same-day courier service ensures your parcels and goods are collected and delivered on the same day, anywhere in the UK. Ideal for urgent documents, parts, and time-critical items.",
+                features: ["Collection within 60 minutes", "Real-time GPS tracking", "Proof of delivery", "UK-wide coverage"],
                 reversed: false,
               },
               {
-                icon: Ship,
-                title: "Ocean Freight",
-                description: "Cost-effective and reliable ocean freight services for international shipping. We handle everything from documentation to customs clearance, offering both FCL and LCL container solutions.",
-                features: ["Full Container Load (FCL)", "Less Container Load (LCL)", "Customs Brokerage", "Port-to-Door Delivery"],
+                icon: Clock,
+                title: "Next-Day Delivery",
+                description: "Our next-day delivery service offers a cost-effective solution for non-urgent consignments. We collect in the evening and deliver by the next morning, providing reliable overnight logistics for businesses of all sizes.",
+                features: ["Evening collection available", "Before 10am delivery option", "Signed delivery confirmation", "Competitive pricing"],
                 reversed: true,
               },
               {
-                icon: Plane,
-                title: "Air Freight",
-                description: "When speed matters most, our air freight services deliver. We partner with major airlines worldwide to provide express, standard, and charter air cargo solutions for time-sensitive shipments.",
-                features: ["Express & Standard Options", "Charter Services", "Dangerous Goods Handling", "Airport-to-Airport & Door-to-Door"],
+                icon: MapPin,
+                title: "Multi-Drop Delivery",
+                description: "Perfect for businesses with multiple delivery points. Our multi-drop service efficiently routes deliveries across multiple locations, saving you time and money compared to individual shipments.",
+                features: ["Route-optimised scheduling", "Up to 20+ drops per round", "Regular or one-off runs", "Live delivery updates"],
                 reversed: false,
               },
               {
                 icon: Package,
-                title: "Warehousing & Distribution",
-                description: "State-of-the-art warehousing facilities with advanced inventory management systems. We provide secure storage, order fulfillment, and distribution services to streamline your supply chain.",
-                features: ["Secure Storage Facilities", "Inventory Management", "Order Fulfillment", "Cross-Docking Services"],
+                title: "Dedicated Van Hire",
+                description: "Need a van and driver for a full day or longer? Our dedicated van hire service gives you exclusive use of a vehicle and professional driver for moves, events, ongoing contracts, or any large-scale delivery requirement.",
+                features: ["Full-day or half-day hire", "Professional uniformed drivers", "Various van sizes available", "Flexible contract terms"],
                 reversed: true,
               },
             ].map((service, index) => (
@@ -111,10 +110,10 @@ export default function ServicesPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: FileCheck, title: "Customs Clearance", description: "Expert handling of import/export documentation and regulatory compliance." },
-              { icon: BarChart3, title: "Supply Chain Consulting", description: "Strategic advice to optimize your logistics operations and reduce costs." },
-              { icon: Boxes, title: "Packaging Solutions", description: "Custom packaging design and materials for safe, secure transport." },
-              { icon: Headphones, title: "24/7 Support", description: "Round-the-clock customer service and shipment monitoring." },
+              { icon: Zap, title: "Express Courier", description: "Priority express delivery for urgent last-minute parcels and documents." },
+              { icon: Shield, title: "Secure Transport", description: "Safe handling of fragile, high-value, and sensitive goods with full insurance." },
+              { icon: Boxes, title: "Light Removals", description: "Small office and home moves handled quickly and carefully by our team." },
+              { icon: Headphones, title: "24/7 Support", description: "Round-the-clock customer service and live delivery monitoring." },
             ].map((service) => (
               <div key={service.title} className="bg-card border border-border rounded-xl p-6">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
@@ -133,7 +132,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Need a Custom Solution?</h2>
           <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-            Every business is unique. Let us design a logistics solution that fits your specific requirements.
+            Every business is unique. Let us design a delivery solution that fits your specific requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-base bg-primary text-white hover:bg-primary/90" asChild>

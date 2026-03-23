@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Users, Shield, Globe, Award } from "lucide-react"
+import { ArrowRight, Users, Shield, MapPin, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function AboutPage() {
@@ -13,7 +13,7 @@ export default function AboutPage() {
           <div className="max-w-2xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">About HSL Logistics</h1>
             <p className="text-white/80 text-lg md:text-xl leading-relaxed">
-              Over 15 years of delivering excellence in global freight and supply chain solutions.
+              Trusted van delivery and courier services across the UK since 2015.
             </p>
           </div>
         </div>
@@ -29,16 +29,16 @@ export default function AboutPage() {
                 Built on Trust, Driven by Excellence
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Founded in 2009, HSL Logistics began as a small freight forwarding company with a big vision:
-                to make global logistics accessible, reliable, and efficient for businesses of all sizes.
+                Founded in 2015, HSL Logistics began as a small delivery company in Birmingham with a big vision:
+                to make van delivery accessible, reliable, and efficient for businesses of all sizes.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Today, we operate across 120+ countries with a team of dedicated professionals who share a
-                passion for moving the world forward. Our commitment to innovation and customer service has
-                made us one of the most trusted names in the logistics industry.
+                Today, we operate across the UK with a team of dedicated professionals who share a
+                passion for delivering on time, every time. Our commitment to customer service has
+                made us one of the most trusted names in van delivery.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                We believe that every shipment tells a story — and we&apos;re honored to be part of yours.
+                We believe that every delivery tells a story — and we&apos;re honored to be part of yours.
               </p>
             </div>
 
@@ -47,7 +47,7 @@ export default function AboutPage() {
                 <Image src="/hero-delivery.jpg" alt="HSL Logistics delivery team" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold">2009</div>
+                <div className="text-3xl font-bold">2015</div>
                 <div className="text-sm text-primary-foreground">Year Founded</div>
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function AboutPage() {
               What Sets Us Apart
             </h2>
             <p className="text-muted-foreground text-lg">
-              Our core values guide every decision we make and every shipment we handle.
+              Our core values guide every decision we make and every delivery we handle.
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export default function AboutPage() {
               {
                 icon: Shield,
                 title: "Reliability",
-                description: "We deliver on our promises. Your cargo is in safe hands with our proven track record of on-time deliveries.",
+                description: "We deliver on our promises. Your goods are in safe hands with our proven track record of on-time deliveries.",
               },
               {
                 icon: Users,
@@ -81,9 +81,9 @@ export default function AboutPage() {
                 description: "Your success is our priority. We tailor solutions to fit your unique business needs and challenges.",
               },
               {
-                icon: Globe,
-                title: "Global Reach",
-                description: "With partners in 120+ countries, we connect your business to markets worldwide seamlessly.",
+                icon: MapPin,
+                title: "UK Coverage",
+                description: "From Birmingham to every corner of the UK, we deliver wherever your business needs us.",
               },
               {
                 icon: Award,
@@ -111,10 +111,10 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "15+", label: "Years Experience" },
-              { value: "50K+", label: "Deliveries Made" },
-              { value: "120+", label: "Countries Served" },
-              { value: "99%", label: "Customer Satisfaction" },
+              { value: "10+", label: "Years Experience" },
+              { value: "50K+", label: "Deliveries Completed" },
+              { value: "500+", label: "Happy Clients" },
+              { value: "99.5%", label: "On-Time Rate" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-3xl md:text-4xl font-bold mb-2">{stat.value}</div>
@@ -134,7 +134,7 @@ export default function AboutPage() {
               Meet the People Behind HSL
             </h2>
             <p className="text-muted-foreground text-lg">
-              Our experienced leadership team brings decades of logistics expertise to your business.
+              Our experienced team brings years of delivery expertise to every job.
             </p>
           </div>
 
@@ -161,7 +161,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Work Together?</h2>
           <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-            Let us show you why thousands of businesses trust HSL Logistics with their shipping needs.
+            Let us show you why businesses across the UK trust HSL Logistics with their delivery needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-base bg-primary text-white hover:bg-primary/90" asChild>
