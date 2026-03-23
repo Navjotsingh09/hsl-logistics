@@ -37,7 +37,7 @@ export async function POST(request: Request) {
       _captcha: "false",
     })
 
-    const formSubmitResponse = await fetch("https://formsubmit.co/ajax/info@highspeedlogistics.co.uk", {
+    const formSubmitResponse = await fetch("https://formsubmit.co/ajax/navjot.singh@5rv.digital", {
       method: "POST",
       headers: {
         Accept: "application/json",
