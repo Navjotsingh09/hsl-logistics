@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { ContactForm } from "@/components/contact-form"
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -80,107 +80,7 @@ export default function ContactPage() {
                 <h3 className="text-2xl font-bold text-foreground mb-2">Send Us a Message</h3>
                 <p className="text-muted-foreground mb-8">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
 
-                <form action="https://formsubmit.co/info@highspeedlogistics.co.uk" method="POST" className="space-y-6">
-                  <input type="hidden" name="_subject" value="New Contact Form Submission - HSL Logistics" />
-                  <input type="hidden" name="_next" value="https://highspeedlogistics.co.uk/contact/thanks" />
-                  <input type="hidden" name="_captcha" value="true" />
-                  <input type="hidden" name="_template" value="table" />
-                  <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" aria-label="Do not fill this field" />
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
-                        First Name
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="First Name"
-                        required
-                        className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                        placeholder="John"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="Last Name"
-                        required
-                        className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                        placeholder="Doe"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                        Email Address
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="Email"
-                        required
-                        className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                        placeholder="john@example.com"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="Phone"
-                        className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                        placeholder="02031502602"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
-                      Service Required
-                    </label>
-                    <select
-                      id="service"
-                      name="Service Required"
-                      required
-                      className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                    >
-                      <option value="">Select a service</option>
-                      <option value="Road Freight">Road Freight</option>
-                      <option value="Ocean Freight">Ocean Freight</option>
-                      <option value="Air Freight">Air Freight</option>
-                      <option value="Warehousing">Warehousing</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="Message"
-                      required
-                      rows={5}
-                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                      placeholder="Tell us about your shipping needs..."
-                    />
-                  </div>
-
-                  <Button type="submit" size="lg" className="w-full sm:w-auto">
-                    Send Message
-                    <Send className="ml-2 h-3.5 w-3.5 text-primary" />
-                  </Button>
-                </form>
+                <ContactForm />
               </div>
             </div>
           </div>
